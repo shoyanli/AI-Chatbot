@@ -1,0 +1,723 @@
+{
+  "rasa_nlu_data": {
+    "regex_features": [
+      {
+        "name": "zipcode",
+        "pattern": "[0-9]{5}"
+      },
+      {
+        "name": "greet",
+        "pattern": "hey[^\\s]*"
+      }
+    ],
+    "entity_synonyms": [
+      {
+        "value": "Chicago",
+        "synonyms": ["Chicago city", "windy city","chicago"]
+      },
+       
+
+     {
+        "value": "Los Angles",
+        "synonyms": [ "la","LA"]
+      },
+        {
+        "value": "London",
+        "synonyms": [ "london","UK"]
+      },
+      {
+        "value": "New York City",
+        "synonyms": ["new york", "newyork city","New York"]
+      },
+      {
+        "value": "HI",
+        "synonyms": ["expensive","hi","luxury", "valued","hightly rated","great","top notched","cheaper"]
+      },
+      {
+        "value": "MID",
+        "synonyms": ["medium","mid","average", "middling","intermediate","resonable","med"]
+      },
+              {
+        "value": "Downtown",
+        "synonyms": ["heart","downtown"]
+      },
+      {
+        "value": "LO",
+        "synonyms": ["cheap","affordable","budget","lo","low-end","better"]
+      }
+        
+    ],
+    "common_examples": [
+      {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+     {
+        "text": "expensive", 
+        "intent": "pricerange", 
+        "entities": [
+            {
+            "start": 0,
+            "end": 9,
+            "value": "expensive",
+            "entity": "pricerange"
+          }
+        ]
+      }, 
+        
+             {
+        "text": "cheap", 
+        "intent": "pricerange", 
+        "entities": [
+            {
+            "start": 0,
+            "end": 5,
+            "value": "cheap",
+            "entity": "pricerange"
+          }
+        ]
+      }, 
+        
+                     {
+        "text": "mid", 
+        "intent": "pricerange", 
+        "entities": [
+            {
+            "start": 0,
+            "end": 3,
+            "value": "mid",
+            "entity": "pricerange"
+          }
+        ]
+      }, 
+        
+        
+      {
+        "text": "hey there",
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "hi", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "dear sir",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yep", 
+        "intent": "affirm", 
+        "entities": []
+      }, 
+      {
+        "text": "yeah", 
+        "intent": "affirm", 
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right, thank you",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "great choice",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sounds really good",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "How is it",
+        "intent": "questingdetail",
+        "entities": []
+      },
+              {
+        "text": "Can you tell me more about it",
+        "intent": "questingdetail",
+        "entities": []
+      },
+      {
+        "text": "Can you tell me more about it",
+        "intent": "questingdetail",
+        "entities": []
+      },
+              {
+        "text": "Can you tell me more about it",
+        "intent": "questingdetail",
+        "entities": []
+      },
+          {
+        "text": "Is it good",
+        "intent": "askrating",
+        "entities": []
+      },
+        
+                  {
+        "text": "Is there any cheaper ones",
+        "intent": "negate",
+        "entities": [
+            {
+            "start": 7,
+            "end": 15,
+            "value": "cheaper",
+            "entity": "pricerange"
+        }
+        ]
+      },
+        
+                          {
+        "text": "It is too expensive, is any cheap ones",
+        "intent": "negate",
+        "entities": [{
+            "start": 10,
+            "end": 19,
+            "value": "expensive",
+            "entity": "pricerange"
+        }
+        ]
+      },
+        
+                                  {
+        "text": "It is too expensive",
+        "intent": "negate",
+        "entities": [{
+            "start": 10,
+            "end": 19,
+            "value": "expensive",
+            "entity": "pricerange"
+        }
+        ]
+      },
+        
+        
+        
+                          {
+        "text": "Is there any better ones",
+        "intent": "negate",
+        "entities": [{
+            "start": 13,
+            "end": 19,
+            "value": "better",
+            "entity": "raterange"
+        }
+        ]
+      },
+        
+          {
+        "text": "Is it expensive",
+        "intent": "askprice",
+        "entities": []
+      },
+                  {
+        "text": "Is it cheap",
+        "intent": "askprice",
+        "entities": []
+      },
+    
+                          {
+        "text": "How much is it",
+        "intent": "askprice",
+        "entities": []
+      },
+        
+      {
+        "text": "i'm looking for a place to sleep",
+        "intent": "hotel_search",
+        "entities": []
+      },
+      {
+        "text": "I want find a hotel",
+        "intent": "hotel_search",
+        "entities": []
+      },
+      {
+        "text": "I am searching for a hotel",
+        "intent": "hotel_search",
+        "entities": []
+      },
+      {
+        "text": "i'm looking for a hotel near chicago downtown",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 30,
+            "end": 37,
+            "value": "chicago",
+            "entity": "city"
+          },
+                      {
+            "start": 38,
+            "end": 46,
+            "value": "downtown",
+            "entity": "interest3"
+          }
+        ]
+      },
+              {
+        "text": "show me a hotel near chicago downtown",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 21,
+            "end": 28,
+            "value": "chicago",
+            "entity": "city"
+          },
+                      {
+            "start": 29,
+            "end": 37,
+            "value": "downtown",
+            "entity": "interest3"
+          }
+        ]
+      },
+      {
+        "text": "show me great hotels",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "great",
+            "entity": "raterange"
+          }
+        ]
+      },
+      {
+        "text": "show me great hotels in New York",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 8,
+            "end": 13,
+            "value": "great",
+            "entity": "raterange"
+          },
+          {
+            "start": 24,
+            "end": 32,
+            "value": "New York",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "show me an average hotel in Los Angles", 
+        "intent": "hotel_search", 
+        "entities": [
+          {
+            "start": 9, 
+            "end": 16, 
+            "value": "average", 
+            "entity": "pricerange"
+          }, 
+          {
+            "start": 26, 
+            "end": 36, 
+            "value": "Los Angles", 
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "i am looking for a hotel at Michigan Avenue in Chicago",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 28,
+            "end": 43,
+            "value": "Michigan Avenue",
+            "entity": "interest2"
+          },
+                      {
+            "start": 47,
+            "end": 53,
+            "value": "Chicago",
+            "entity": "city"
+          }
+        ]
+      },
+              {
+        "text": "is any hotels at Michigan Avenue in Chicago",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 17,
+            "end":32,
+            "value": "Michigan Avenue",
+            "entity": "interest2"
+          },
+                      {
+            "start": 36,
+            "end": 43,
+            "value": "Chicago",
+            "entity": "city"
+          }
+        ]
+      },
+        {
+        "text": "search for hotels",
+        "intent": "hotel_search",
+        "entities": []
+      },
+      {
+        "text": "anywhere in London",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "London",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "anywhere near Millennium Park",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 30,
+            "value": "Millennium Park",
+            "entity": "interest1"
+          }
+        ]
+      },
+      {
+        "text": "I am looking for an luxury hotel",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 31,
+            "value": "luxury",
+            "entity": "pricerange"
+          }
+        ]
+      },
+      {
+        "text": "I am looking a affordable hotel in new york",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 25,
+            "value": "affordable",
+            "entity": "pricerange"
+          },
+                      {
+            "start": 35,
+            "end": 43,
+            "value": "new york",
+            "entity": "city"
+                      }
+        ]
+      },
+      {
+        "text": "I am looking for a highly rated hotel in chicago",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "highly rated",
+            "entity": "raterange"
+          },
+                      {
+            "start": 41,
+            "end": 48,
+            "value": "chicago",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "downtown chicago hotel",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "downtown",
+            "entity": "interest3"
+          },
+          {
+            "start": 8,
+            "end": 16,
+            "value": "chicago",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "goodbye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "good bye", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "stop", 
+        "intent": "goodbye", 
+        "entities": []
+      }, 
+      {
+        "text": "end", 
+        "intent": "goodbye", 
+        "entities": []
+      },
+      {
+        "text": "farewell",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "Bye bye",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "have a good one",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "a cheap hotel in London",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 2,
+            "end": 7,
+            "value": "cheap",
+            "entity": "pricerange"
+          },
+          {
+            "start": 17,
+            "end": 23,
+            "value": "London",
+            "entity": "city"
+          }
+        ]
+      },
+              {
+        "text": "I wang a cheap hotel in London",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 9,
+            "end": 14,
+            "value": "cheap",
+            "entity": "pricerange"
+          },
+          {
+            "start": 24,
+            "end": 30,
+            "value": "london",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "an expensive hotel in New York",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 3,
+            "end": 12,
+            "value": "expensive",
+            "entity": "pricerange"
+          },
+          {
+            "start": 22,
+            "end": 30,
+            "value": "New York",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "a hotel in the downtown",
+        "intent": "hotel_search",
+        "entities": [
+          {
+            "start": 15,
+            "end": 23,
+            "value": "downtown",
+            "entity": "interest3"
+          }
+        ]
+      },
+      {
+        "text": "close to downtown",
+        "intent": "interest3",
+        "entities": [
+          {
+            "start": 9,
+            "end": 17,
+            "value": "downtown",
+            "entity": "interest3"
+          }
+        ]
+      },
+      {
+        "text": "in the Chicago",
+        "intent": "city",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "Chicago",
+            "entity": "city"
+          }
+        ]
+      },
+              {
+        "text": "in London",
+        "intent": "city",
+        "entities": [
+          {
+            "start": 3,
+            "end": 9,
+            "value": "London",
+            "entity": "city"
+          }
+        ]
+      },
+              {
+        "text": "in Chicago",
+        "intent": "city",
+        "entities": [
+          {
+            "start": 3,
+            "end": 10,
+            "value": "Chicago",
+            "entity": "city"
+          }
+        ]
+      },
+                      {
+        "text": "in the London",
+        "intent": "city",
+        "entities": [
+          {
+            "start": 7,
+            "end": 13,
+            "value": "London",
+            "entity": "city"
+          }
+        ]
+      },
+      {
+        "text": "I want a mid range hotel",
+        "intent": "hotel_search",
+        "entities": [
+            {
+                 "start": 9,
+            "end": 12,
+            "value": "mid",
+            "entity": "pricerange"
+            }
+        ]
+      },
+        
+          {
+        "text": "I want a mid range hotel in new york",
+        "intent": "hotel_search",
+        "entities": [
+            {
+                 "start": 9,
+            "end": 12,
+            "value": "mid",
+            "entity": "pricerange"
+            },
+               {
+                 "start": 18,
+            "end": 36,
+            "value": "new york",
+            "entity": "city"
+            }
+        ]
+      },
+        
+        
+      {
+        "text": "I want a great hotel",
+        "intent": "hotel_search",
+        "entities": [
+                        {
+                 "start": 9,
+            "end": 14,
+            "value": "great",
+            "entity": "raterange"
+            }
+        ]
+      }
+    ]
+  }
+}
